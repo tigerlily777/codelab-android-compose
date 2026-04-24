@@ -57,7 +57,6 @@ import com.example.compose.rally.ui.components.RallyAlertDialog
 import com.example.compose.rally.ui.components.RallyDivider
 import com.example.compose.rally.ui.components.formatAmount
 import java.util.Locale
-import androidx.compose.ui.platform.LocalLocale
 
 @Composable
 fun OverviewScreen(
@@ -98,7 +97,7 @@ private fun AlertCard() {
                 showDialog = false
             },
             bodyText = alertMessage,
-            buttonText = "Dismiss".uppercase(LocalLocale.current.platformLocale)
+            buttonText = "Dismiss".uppercase(Locale.getDefault())
         )
     }
     Card {
